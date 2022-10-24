@@ -7,7 +7,7 @@ const MovieListPage = (props) => {
             
                 {props.movieList.map((movie, index)=>{
                     return (
-                        <MovieCard movie={movie} index={index}  />
+                        <MovieCard movie={movie} key={index}  />
                     )
                 })}
             

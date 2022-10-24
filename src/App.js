@@ -7,6 +7,8 @@ import MovieListPage from "./Pages/MovieListPage";
 import { useState } from "react";
 import MoviePage from "./Pages/MoviePage";
 import MovieFormPage from "./Pages/MovieFormPage";
+import ErrorPage from "./Pages/ErrorPage";
+import { getAllByTitle } from "@testing-library/react";
 
 const sampleMovies = [
   {
@@ -511,22 +513,50 @@ const App = () => {
 
 
 
-  const handleAddMovie = (Title) => {
-      const newMovie = {
+  const handleAddMovie = (Title, Year, Rated, Released, Runtime, Genre, Director, Writer, Actors, Plot, Language, Country, Awards, Poster, ImdbRating, ImdbVotes, ImdbID, Type, Response, imagesArray, Metascore) => {
+    
+
+    
+    const newMovie = {
         Title,
-      }
+        Year,
+        Rated,
+        Released,
+        Runtime, 
+        Genre, 
+        Director, 
+        Writer, 
+        Actors, 
+        Plot, 
+        Language, 
+        Country, 
+        Awards, 
+        Poster, 
+        ImdbRating, 
+        ImdbVotes, 
+        ImdbID, 
+        Type, 
+        Response, 
+        Images: imagesArray, 
+        Metascore
+        }
       setMovieList([...movieList, newMovie])
+      console.log(newMovie.Images)  
   }
 
-
+  const handleDeleteMovie = () => {
+    
+  }
   const router = createBrowserRouter([
     {
       path: "/",
       element: <NavLayout />,
+      errorElement: <ErrorPage />,
       children: [
         {
           index: true,
           element: <HomePage />,
+          
         },
         {
           path: "/movies",

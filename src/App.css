@@ -17,8 +17,9 @@
   position: relative;
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  width: 100%;
+  /* display: flex; */
+  /* width: 100%; */
+  
 
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
@@ -39,19 +40,21 @@
 }
 
 .nav-bar {
-  position:relative;
+  /* position:relative; */
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
   gap: 100px;
   width: 100%;
+  border-bottom: solid .5px whitesmoke;
+  height: 50px;
 }
 
 .nav-layout {
-  position: relative;
+  /* position: relative; */
   display: flex;
   flex-direction: column;
-  width: 100%;
+  /* width: 100%; */
  
 
 }
@@ -60,17 +63,16 @@
   display: flex;
   flex-direction: row;
   border: black;
-  width: 100%;
+  justify-content: flex-start;
+  /* width: 100%; */
 
 }
 
 .movie-sidebar{
   display: flex;
   flex-direction: column;
-  border-top: solid 1px white;
-  border-right: solid 1px white;
-  width: 100%;
-  
+  border-right: solid .5px whitesmoke;
+ 
   
   
   
@@ -78,27 +80,173 @@
 
 .movie-content{
   display: flex;
-  border: black;
+  /* border: black;
   border-top: solid 1px white;
-  width: 100%;
+  width: 100%; */
+
   
 }
 
 .movie-list {
   max-height: 80vh;
   overflow-y: scroll;
-  width: 100%;
+  /* width: 100%; */
+
 }
 
 .movie-list-card {
+  display: flex;
   border: solid 1px white;
-  width: 100%;
+  height: 375px;
+
+  /* width: 100%; */
+
 }
 
 .movie-form-page {
-
-  width: 100%;
+/* 
+  width: 100%; */
+  font-size: larger;
 }
+
+.movie-card-image {
+  display: flex; 
+  flex-direction: column;
+  align-items: baseline;
+  padding-top: 5%;
+  height: 200px;
+
+}
+
+.movie-list-card-text-container {
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: column;
+}
+
+.movie-page {
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+}
+
+.image-scroll-button {
+  padding: 10px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 15%;
+  box-shadow: 2px 5px 5px 3px #adabab;
+  width: 100px
+}
+.image-scroll-button:hover {
+  background-color: cadetblue;
+}
+
+.image-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+
+.navLink:link {
+  border-radius: 10%;
+  color: white;
+  background-color: black;
+  font-size: medium;
+  text-align: center;
+  text-decoration: none;
+  height: 30px;
+  width: 100px;
+}
+.navLink:visited {
+  border-radius: 10%;
+  color: white;
+  background-color: black;
+  font-size: medium;
+  text-align: center;
+  text-decoration: none;
+  height: 30px;
+  width: 100px;
+}
+
+.navLink:hover {
+  border-radius: 10%;
+  color: white;
+  background-color: rgb(59, 58, 58);
+  font-size: medium;
+  text-align: center;
+  text-decoration: none;
+  height: 33px;
+  width: 103px;
+}
+
+.navLink:active {
+  border-radius: 10%;
+  color: white;
+  background-color: rgb(105, 104, 104);
+  font-size: medium;
+  text-align: center;
+  text-decoration: none;
+  height: 25px;
+  width: 90px;
+}
+
+.movieSidebar-link {
+  margin-left: 5px;
+  margin-right: 5px;
+  display: block;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: auto;
+  text-decoration: none;
+  border: solid 1px #282c34;
+  background-color: rgb(105, 104, 104);
+  font-size: medium;
+  color: whitesmoke;
+  height: 30px;
+}
+
+.movieSidebar-link:visited {
+  display: block;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: auto;
+  text-decoration: none;
+  border: solid 1px #282c34;
+  background-color: rgb(105, 104, 104);
+  font-size: medium;
+  color: whitesmoke;
+  height: 30px;
+}
+
+.movieSidebar-link:hover {
+  display: block;
+  text-align: center;
+  padding-top: 7px;
+  padding-bottom: auto;
+  text-decoration: none;
+  background-color: rgb(60, 58, 58);
+  font-size: medium;
+  color: whitesmoke;
+  height: 30px; 
+}
+
+.movieSidebar-link:active {
+  display: block;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: auto;
+  text-decoration: none;
+  background-color: rgb(60, 58, 58);
+  font-size: medium;
+  color: whitesmoke;
+  height: 30px;
+  width: 98%; 
+}
+
 
 /* .footer {
   text-align: center;
