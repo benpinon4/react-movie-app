@@ -516,7 +516,7 @@ const App = () => {
   const handleAddMovie = (Title, Year, Rated, Released, Runtime, Genre, Director, Writer, Actors, Plot, Language, Country, Awards, Poster, ImdbRating, ImdbVotes, ImdbID, Type, Response, imagesArray, Metascore) => {
     
 
-    
+      
     const newMovie = {
         Title,
         Year,
@@ -544,7 +544,19 @@ const App = () => {
       console.log(newMovie.Images)  
   }
 
-  const handleDeleteMovie = () => {
+  const handleDeleteMovie = (deleteMovie) => {
+
+
+   const movieListCopy = [...movieList]
+   const deleteMovieIndex = movieListCopy.find((movie)=>{
+    return movie.Title === deleteMovie.Title
+   })  
+   console.log(deleteMovieIndex)
+  
+   movieListCopy.splice(deleteMovieIndex, 1)
+
+   setMovieList(movieListCopy)
+
     
   }
   const router = createBrowserRouter([
@@ -572,7 +584,7 @@ const App = () => {
             },
             {
               path:"/movies/:title",
-              element: <MoviePage movieList={movieList} />
+              element: <MoviePage movieList={movieList} handleDeleteMovie={handleDeleteMovie}/>
             }
           ],
         },
