@@ -47,7 +47,7 @@ const MoviePage = (props) => {
         <h2>Title: {foundMovie.Title}</h2>
         <button
           onClick={(event) => {
-            event.preventDefault();
+
             props.handleDeleteMovie(foundMovie);
           }}
         >

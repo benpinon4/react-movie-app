@@ -548,7 +548,7 @@ const App = () => {
 
 
    const movieListCopy = [...movieList]
-   const deleteMovieIndex = movieListCopy.find((movie)=>{
+   const deleteMovieIndex = movieListCopy.findIndex((movie)=>{
     return movie.Title === deleteMovie.Title
    })  
    console.log(deleteMovieIndex)
